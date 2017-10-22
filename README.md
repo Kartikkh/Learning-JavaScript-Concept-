@@ -4,21 +4,22 @@
 
 ##### Hello Foks ! Welcome to Javascript World 
 
-######  I have created this Javascript concept list that everyone must check before starting with Javascript or going for an interview  and I am constantly updating it with new resources and information. Please feel free to Contribute !  
+#####  I have created this Javascript concept list that everyone must check before starting with Javascript or going for an interview  and I am constantly updating it with new resources and information. Please feel free to Contribute !  
 ---  
 #### Basics of Javascript
 
 Whenever javascripts code runs, it runs inside the execution context so whenever you start to run the code. Javascript automatically create a global execution context and that global execution context create a window object inside it and every global variable created will be automatically attach to this window object.
-So whenever you create a global variable or function in a .js file
+So whenever you create a global variable or function in a .js file, then that variable will atach to window object
 
 ```javascript 
 var a =2 ; // global variable (Not inside any function)
 function b(){
  var c = 1 ;  // local variable 
 }
-```
+console.log(window.a) // will return 2
 
-[Live Example](https://jsbin.com/zeyesiqoho/edit?js,console)
+```
+[See the Example for clarifications](https://jsbin.com/zeyesiqoho/edit?js,console)
 
 #### Phases in Javascripts 
 In javascript there are two phases
@@ -79,7 +80,7 @@ Which practically means that, yes, you can call the functions before they’re w
   Functions declarations must have names
 This method doesn’t allow you to create anonymous functions, meaning that you always have to give it an identifier (in this case we’ve used “A”).
 
-  ##### Functions 
+#### Functions 
    Funtion in Javascript can be define in 3 ways 
    * Function Defination
    * Function Expressions 
