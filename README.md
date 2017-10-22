@@ -6,8 +6,60 @@
 
 ######  I have created this Javascript concept list that everyone must check before starting with Javascript or going for an interview  and I am constantly updating it with new resources and information. Please feel free to Contribute !  
 ---  
+#### Basics of Javascript
+
+Whenever javascripts code runs, it runs inside the execution context so whenever you start to run the code. Javascript automatically create a global execution context and that global execution context create a window object inside it and every global variable created will be automatically attach to this window object.
+So whenever you create a global variable or function in a .js file
+
+```javascript 
+var a =2 ; // global variable (Not inside any function)
+function b(){
+ var c = 1 ;  // local variable 
+}
+```
+
+[Live Example](https://jsbin.com/zeyesiqoho/edit?js,console)
+
+#### Phases in Javascripts 
+In javascript there are two phases
+ Creation phase
+ Execution phase
+So whenever Javascript starts (Creation Phase) global execution context is created and inside this Global execution context a global object is created which is (window object) , this object , and there is also a place for variable setup (Hoisting) where function are setup and variable are set up to undefined 
+To try out hoisting 
+
+``` javascript
+console.log(a);
+var a = "hello world"
+console.log(a);
+c();
+function c(){
+  console.log("hello");
+}
+
+```
+Output for the above will be
+```
+undefined
+hello world
+hello
+```
+Creation Phase of above code will be 
+``` javascript
+var a = undefined;
+function c(){
+  console.log("hello");
+}
+console.log(a);
+a="hello world"
+console.log(a)
+c();
+```
+
+So in Creation Phase all the variable will be defined as undefined and all the fucntion defination will be move at the top and after creation phase the code will execute line by line in execution phase. 
+
+
   
-##### Hoisting
+#### Hoisting
 The interesting thing about these is that they are “hoisted” to the top of their scope, which means this code:
 ``` javascript
 A();
