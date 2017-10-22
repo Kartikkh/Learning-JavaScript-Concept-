@@ -23,9 +23,12 @@ console.log(window.a) // will return 2
 
 #### Phases in Javascripts 
 In javascript there are two phases
- Creation phase
- Execution phase
-So whenever Javascript starts (Creation Phase) global execution context is created and inside this Global execution context a global object is created which is (window object) , this object , and there is also a place for variable setup (Hoisting) where function are setup and variable are set up to undefined 
+ * Creation phase
+ * Execution phase
+ 
+ So whenever Javascript starts (Creation Phase) global execution context is created and inside this Global execution context a window object, this object , and hoisting space is created 
+Hoisting space is a place for variable and functions are setup. variable are setup to undefined and function defination are move to top.
+
 To try out hoisting 
 
 ``` javascript
