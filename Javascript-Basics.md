@@ -152,3 +152,34 @@ The second example gives us an error because only the variable B2’s declaratio
 ##### [Try This To test Your Knowledge ](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/)
 
 
+
+####  Prototypal Inhertence   
+    
+##### So what is Prototypal Inheritence ? And how it is different from Classical     Inheritence
+
+So, Classical Inheritence is there in C#, Java, C++ etc. Its like sharing the method and propoerties of other object. 
+
+So, when we talk about Prototypal inheritence, it is much simple, flexible and easy to use as compared to classical inheritence as in Classical inheritence we have complex binding and different keywords that specifies the binding like Friend , private, public, protected etc.
+
+Now Let's deep dive into Prototypal Inheritence 
+```sh
+ var obj = {
+   prop1 
+ }
+```
+So in order to use prop1 in obj we can directly use it through 
+
+```sh 
+obj.prop1
+```
+But as we know Javascript usually attach hidden things to object that we don't use 
+So, on every object (including functions) Javascript attach a proto object 
+So every object has a proto property and so on .. 
+The prototype chain,the concept of prototypes is just I have this special reference in my object that says where to look for other properties and methods without manually going dot prototype.
+
+![concepts](http://7xph6d.com1.z0.glb.clouddn.com/JavaScript_prototype-chain.png)
+    
+So in order to use prop2 on obj1 we can directly use 
+ ```sh 
+ obj1.prop2
+ ```
